@@ -1,23 +1,23 @@
 Contract Churn Prediction: End to End Machine Learning Project
 Project Overview
 
-This project builds an end to end predictive churn model to identify contracts at risk of cancellation across a portfolio of 999 contracts and 296 customers. Using customer firmographic data and contract level information the model predicts the binary outcome of whether a contract will churn or be retained — enabling proactive retention intervention before revenue is lost.
+This project builds an end to end predictive churn model to identify contracts at risk of cancellation across a portfolio of 999 contracts and 296 customers. Using customer firmographic data and contract level information the model predicts the binary outcome of whether a contract will churn or be retained enabling proactive retention intervention before revenue is lost.
 
 The project was developed as part of a data science full analytical lifecycle from raw PDF data extraction through to a deployable machine learning model and stakeholder presentation.
 
 Business Problem
 
-A 29% contract churn rate was identified across the portfolio resulting in $38,431 in lost revenue — representing 28.3% of total portfolio value. The core challenge is that churn is invisible until it is too late — by the time a customer cancels the decision has already been made.
+A 29% contract churn rate was identified across the portfolio resulting in $38,431 in lost revenue representing 28.3% of total portfolio value. The core challenge is that churn is invisible until it is too late by the time a customer cancels the decision has already been made.
 
-This project addresses the timing problem by building a model that scores every active contract with a churn probability — giving the retention team a prioritised list of at-risk contracts to act on before cancellation occurs.
+This project addresses the timing problem by building a model that scores every active contract with a churn probability giving the retention team a prioritised list of at-risk contracts to act on before cancellation occurs.
 
 Key Findings
 
 
-46% of customers are partially churned — they have lost some but not all contracts and represent the highest revenue recovery opportunity at approximately $90,000
-Low revenue companies churn at 41.2% — more than double the rate of High revenue companies at 17.5%
+46% of customers are partially churned they have lost some but not all contracts and represent the highest revenue recovery opportunity at approximately $90,000
+Low revenue companies churn at 41.2% more than double the rate of High revenue companies at 17.5%
 Gold tier contracts have the highest churn rate at 40% despite not being the most expensive tier
-Revenue related features dominate the model — contract revenue, customer total revenue and the engineered interaction feature Revenue Per Company Size are the top three predictors
+Revenue related features dominate the model contract revenue, customer total revenue and the engineered interaction feature Revenue Per Company Size are the top three predictors
 
 
 
@@ -25,7 +25,7 @@ Datasets
 
 Two datasets were provided in PDF format:
 
-DatasetDescriptionSizeContract DataContract ID, Product tier, Revenue, Churn Flag999 contractsFirmographic DataCustomer profile — Tenure, Industry, Company Revenue, Analytics Intent Score296 customers
+DatasetDescriptionSizeContract DataContract ID, Product tier, Revenue, Churn Flag999 contractsFirmographic DataCustomer profile; Tenure, Industry, Company Revenue, Analytics Intent Score296 customers
 
 The datasets were joined on Customer ID using a LEFT JOIN to preserve all 999 contract rows.
 
@@ -62,22 +62,22 @@ Methodology
 Phase 1 — Data Cleaning
 
 
-Extracted raw data from PDF files using layout-preserving text extraction and regex pattern matching
+Extracted raw data from PDF files using layout preserving text extraction and regex pattern matching
 Performed full data quality audit — duplicate checks, data type validation, outlier detection and missing value treatment
 Joined two datasets on Customer ID using a LEFT JOIN preserving all 999 contract rows
 
 
-Phase 2 — Exploratory Data Analysis
+Phase 2; Exploratory Data Analysis
 
 
 Statistical analysis of all numerical and categorical variables
 Churn rate analysis across product tier, industry, company revenue band, tenure and analytics intent score
-Customer level analysis — identified 46% partially churned customers as the highest priority retention segment
-Revenue at risk analysis — $38,431 lost to churn across the portfolio
-Correlation analysis — no single numeric variable strongly predicts churn alone confirming the need for a machine learning model
+Customer level analysis; identified 46% partially churned customers as the highest priority retention segment
+Revenue at risk analysis; $38,431 lost to churn across the portfolio
+Correlation analysis; no single numeric variable strongly predicts churn alone confirming the need for a machine learning model
 
 
-Phase 3 — Feature Engineering
+Phase 3; Feature Engineering
 
 Expanded from 9 raw columns to 21 model ready features across 5 groups:
 
